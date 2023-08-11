@@ -8,10 +8,12 @@ function App() {
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
+                <Link to="/more">More</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/more" element={<More />} />
             </Routes>
         </BrowserRouter>
     );
@@ -34,5 +36,16 @@ function About() {
         </div>
     );
 }
+
+function More(){
+    return (
+        <div>
+            <h1>
+                I am more component.
+            </h1>
+        </div>
+    )
+}
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);  
